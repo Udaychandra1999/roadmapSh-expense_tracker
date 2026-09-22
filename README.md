@@ -240,15 +240,3 @@ For example:
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-````
-
-One thing to change before committing: replace
-
-```text
-<repository-url>
-````
-
-with your actual GitHub repository URL.
-
-Also, since you're currently moving toward **tests + executable packaging**, the README's "Future Improvements" can later be updated when those features are completed.
