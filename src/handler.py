@@ -24,8 +24,20 @@ def add_expense(description:str,amount:float)->int|None:
 
 def list_expenses()->None:
     expenses = load_expense()
-
+    if not expenses:
+        print("No expenses found")
+        return 
     #display expenses
+    print(f"{'ID':<5}{'Date':<15}{'Description':<20}{'Amount':>10}")
+    print("-"*50)
+    for expense in expenses:
+        amount = f"${expense["amount"]:.2f}"
+        print(
+            f"{expense['id']:<5}"
+            f"{expense['date']:<15}"
+            f"{expense['description']:<20}"
+            f"{amount:>10}"
+        )
 
 
 def delete_expense(expense_id:int)->bool:

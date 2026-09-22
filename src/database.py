@@ -22,6 +22,6 @@ def load_expense() -> list[Expense]:
     with open(DATABASE_FILE,"r") as file:
         return json.load(file)
 
-def save_expense(expenses):
+def save_expense(expenses:list[Expense])->None:
     with open(DATABASE_FILE,"w") as file:
         json.dump(expenses,file,indent=4)
